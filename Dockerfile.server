@@ -1,0 +1,6 @@
+FROM node
+
+COPY --from=denoland/deno:bin /deno /usr/bin/deno
+
+# CMD /usr/local/bin/npm install && /usr/local/bin/node /app/src/server.js
+CMD /usr/bin/deno install --allow-scripts && /usr/bin/deno --allow-all /app/src/server.js
