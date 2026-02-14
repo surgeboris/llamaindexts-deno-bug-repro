@@ -1,7 +1,7 @@
 ## Reproducing the NPM package installation
 
-1. Copy `package.json` to the folder of your liking.
-1. Run `deno install --allow-scripts` in that folder.
+1. Optional: create a folder of your liking and copy `package.json` and `src/` to that folder (to prevent `deno.lock` and `package-lock.json` from affecting the installation).
+1. Run `deno install --allow-scripts` in the folder.
 1. Run `deno info src/server.js` and search output for `@llamaindex+workflow`: there will be two instances with the same version.
 
 
